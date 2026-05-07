@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jacky Mathieu</title>
+
     <style>
         *{
           margin:0;
@@ -14,7 +15,7 @@
     
         body{
           background: linear-gradient(135deg, #006847, #009c3b);
-          height:100vh;
+          color:white;
         }
     
         /* MENU */
@@ -24,6 +25,8 @@
           backdrop-filter: blur(8px);
           padding: 18px 40px;
           border-bottom: 3px solid #ffdf00;
+          position: sticky;
+          top:0;
         }
     
         .menu{
@@ -75,8 +78,7 @@
           justify-content:center;
           align-items:center;
           text-align:center;
-          height:calc(100vh - 80px);
-          color:white;
+          min-height:90vh;
           padding:20px;
         }
     
@@ -90,6 +92,7 @@
           font-size:22px;
           max-width:700px;
           margin-bottom:30px;
+          line-height:1.6;
         }
     
         .btn{
@@ -107,6 +110,75 @@
         .btn:hover{
           transform:scale(1.05);
           background:#fff;
+        }
+
+        /* SECTION */
+        section{
+          padding:80px 10%;
+        }
+
+        .titulo{
+          text-align:center;
+          margin-bottom:50px;
+        }
+
+        .titulo h2{
+          font-size:42px;
+          color:#ffdf00;
+          margin-bottom:15px;
+        }
+
+        .titulo p{
+          font-size:18px;
+          max-width:700px;
+          margin:auto;
+          line-height:1.6;
+        }
+
+        .cards{
+          display:grid;
+          grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+          gap:30px;
+        }
+
+        .card{
+          background:rgba(255,255,255,0.08);
+          border:2px solid rgba(255,255,255,0.1);
+          border-radius:20px;
+          padding:30px;
+          transition:0.3s;
+          backdrop-filter: blur(5px);
+        }
+
+        .card:hover{
+          transform:translateY(-10px);
+          border-color:#ffdf00;
+          box-shadow:0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .card h3{
+          color:#ffdf00;
+          margin-bottom:15px;
+          font-size:24px;
+        }
+
+        .card p{
+          line-height:1.7;
+          font-size:16px;
+        }
+
+        /* FOOTER */
+        footer{
+          background:rgba(0,0,0,0.25);
+          text-align:center;
+          padding:20px;
+          margin-top:40px;
+          border-top:2px solid #ffdf00;
+        }
+
+        footer p{
+          font-size:18px;
+          font-weight:bold;
         }
     
         /* RESPONSIVO */
@@ -129,40 +201,102 @@
           .hero p{
             font-size:18px;
           }
-        }
-      </style>
-</head>
-<body>
-     <nav>
-    <div class="menu">
 
-      <div class="logo">
-        Copa<span>2026</span>
+          .titulo h2{
+            font-size:32px;
+          }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="menu">
+    
+          <div class="logo">
+            Copa<span>2026</span>
+          </div>
+         
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Seleções</a></li>
+            <li><a href="#">Jogos</a></li>
+            <li><a href="#">Estádios</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+    
+        </div>
+    </nav>
+    
+    <header class="hero">
+        <h1>O Maior Evento do Futebol Mundial</h1>
+
+        <p>
+          A Copa 2026 promete emoções inesquecíveis, grandes confrontos
+          e uma experiência única para todos os apaixonados por futebol.
+          Viva cada momento e acompanhe as melhores seleções do planeta.
+        </p>
+
+        <button class="btn">Explorar Campeonato</button>
+    </header>
+
+    <section>
+
+      <div class="titulo">
+        <h2>Destaques da Copa</h2>
+
+        <p>
+          Confira algumas das atrações e novidades que vão marcar
+          a próxima edição do maior torneio de futebol do mundo.
+        </p>
       </div>
 
-      <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Seleções</a></li>
-        <li><a href="#">Jogos</a></li>
-        <li><a href="#">Estádios</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
+      <div class="cards">
 
-    </div>
-  </nav>
+        <div class="card">
+          <h3>🏆 Grandes Seleções</h3>
 
-  <section class="hero">
-    <h1>⚽ Copa do Mundo ⚽</h1>
+          <p>
+            As maiores seleções do planeta estarão reunidas em busca
+            do título mundial, trazendo rivalidades históricas e partidas épicas.
+          </p>
+        </div>
 
-    <p>
-      Viva a emoção do maior campeonato de futebol do planeta.
-      Acompanhe jogos, seleções, estatísticas e muito mais!
-    </p>
+        <div class="card">
+          <h3>⚽ Jogos Incríveis</h3>
 
-    <button class="btn">Ver Tabela</button>
-  </section>
+          <p>
+            Prepare-se para confrontos eletrizantes, gols históricos
+            e muita emoção em cada fase da competição.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🏟️ Estádios Modernos</h3>
+
+          <p>
+            A Copa contará com arenas modernas e estruturas preparadas
+            para receber torcedores do mundo inteiro.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🌎 Experiência Mundial</h3>
+
+          <p>
+            Cultura, festa e paixão pelo futebol vão unir milhões
+            de pessoas em uma celebração inesquecível.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
     <footer> 
-        <p>Jacky Mathieu</p>
+        <p>Jacky Mathieu © 2026</p>
     </footer>
+
 </body>
 </html>
